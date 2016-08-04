@@ -1,8 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
 
 $color-background: #374550;
-$color-text: rgba(white, 0.9);
+$color-text: rgba(white, 0.95);
 $color-border: rgba(white, 0.4);
+$color-field-background: rgba(white, 0.25);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -10,6 +15,7 @@ body {
     color: $color-text;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    line-height: 1.25;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +35,76 @@ body {
 }
 
 .form__title {
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.label {
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.label--check {
+    display: block;
+    font-size: 0.75em;
+    line-height: 2;
+
+    input {
+        margin-right: .5em;
+    }
+}
+
+.field {
+    background: $color-field-background;
+    border: 1px solid $color-border;
+    display: block;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: $color-text;
+}
+
+.field--text {
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .5em;
+    width: 100%;
+}
+
+.field--textarea {
+    width: 100%;
+}
+
+.btn {
+    background: transparent;
+    color: $color-text;
+    font-size: .75em;
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: background .3s linear;
+
+    &:hover {
+        background: rgba(white, .2);
+    }
+}
+
+.btn-group {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.btn--submit {
+    border: 3px solid $color-text;
+    font-weight: bold;
+}
+.btn--reset {
+    border: 0;
+    text-decoration: underline;
 }

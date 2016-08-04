@@ -17,4 +17,4 @@ describe('Validation test', () => {
             const result = isValidCelebrationType('Other', '');
             expect(result).to.be.false;
         });
-})
+});

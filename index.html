@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,inital-scale:1">
+        <meta name="description" content="This is where you'll find the right cake for your next celebration.">
+        <title>Cake Enquiry Form</title>
+    </head>
+    <body>
+        <main>
+            <form>
+                <h1>Cake Enquiry Form</h1>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div>
+                    <label>Type of cake:</label>
+                    <label><input type="checkbox" name="cakeType[]" value="Cupcakes" />Cupcakes</label>
+                    <label><input type="checkbox" name="cakeType[]" value="Cheesecakes" />Cheesecakes</label>
+                    <label><input type="checkbox" name="cakeType[]" value="Butter Cakes" />Butter Cakes</label>
+                    <label><input type="checkbox" name="cakeType[]" value="Mudcakes" />Mudcakes</label>
+                </div>
+                <div>
+                    <label>Celebration type:</label>
+                    <label><input type="radio" name="celebrationType" value="Birthday" />Birthday</label>
+                    <label><input type="radio" name="celebrationType" value="Wedding" />Wedding</label>
+                    <label><input type="radio" name="celebrationType" value="Corporate" />Corporate</label>
+                    <label><input type="radio" name="celebrationType" value="Other" />Other</label>
+                    <input type="text" name="celebrationOther" id="celebrationOther" />
+                </div>
+                <div>
+                    <label for="dreamCake">Tell us about your dream cake:</label>
+                    <textarea name="dreamCake" id="dreamCake"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send away</button>
+                    <button type="reset">Restart</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

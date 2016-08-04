@@ -4,8 +4,9 @@
   "description": "A short test project for Front End Web Engineer",
   "main": "index.js",
   "scripts": {
-    "styles": "node-sass -w src/styles.scss styles.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "styles": "node-sass src/styles.scss styles.css",
+    "scripts": "browserify src/main.js -o main.js -t [ babelify --presets [ es2015 ] ]",
+    "test": "mocha --compilers js:babel-register tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/mikehazell/ustwo_fe-web-engineer#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.11.6",
+    "casperjs": "^1.1.3",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.1",
     "node-sass": "^3.8.0"
   }
 }

@@ -7,39 +7,39 @@
         <title>Cake Enquiry Form</title>
     </head>
     <body>
-        <main>
-            <form>
-                <h1>Cake Enquiry Form</h1>
+        <main class="container">
+            <form class="form">
+                <h1 class="form__title">Cake Enquiry Form</h1>
                 <div>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" required />
+                    <label class="label" for="name">Name:</label>
+                    <input class="field field--text" type="text" name="name" id="name" required />
                 </div>
                 <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required />
+                    <label class="label" for="email">Email:</label>
+                    <input class="field field--text" type="email" name="email" id="email" required />
                 </div>
                 <div>
-                    <label>Type of cake:</label>
-                    <label><input type="checkbox" name="cakeType[]" value="Cupcakes" />Cupcakes</label>
-                    <label><input type="checkbox" name="cakeType[]" value="Cheesecakes" />Cheesecakes</label>
-                    <label><input type="checkbox" name="cakeType[]" value="Butter Cakes" />Butter Cakes</label>
-                    <label><input type="checkbox" name="cakeType[]" value="Mudcakes" />Mudcakes</label>
+                    <label class="label">Type of cake:</label>
+                    <label class="label--check"><input type="checkbox" name="cakeType[]" value="Cupcakes" />Cupcakes</label>
+                    <label class="label--check"><input type="checkbox" name="cakeType[]" value="Cheesecakes" />Cheesecakes</label>
+                    <label class="label--check"><input type="checkbox" name="cakeType[]" value="Butter Cakes" />Butter Cakes</label>
+                    <label class="label--check"><input type="checkbox" name="cakeType[]" value="Mudcakes" />Mudcakes</label>
                 </div>
                 <div>
-                    <label>Celebration type:</label>
-                    <label><input type="radio" name="celebrationType" required value="Birthday" />Birthday</label>
-                    <label><input type="radio" name="celebrationType" required value="Wedding" />Wedding</label>
-                    <label><input type="radio" name="celebrationType" required value="Corporate" />Corporate</label>
-                    <label><input type="radio" name="celebrationType" required value="Other" />Other</label>
-                    <input type="text" name="celebrationOther" id="celebrationOther" />
+                    <label class="label">Celebration type:</label>
+                    <label class="label--check"><input type="radio" name="celebrationType" required value="Birthday" />Birthday</label>
+                    <label class="label--check"><input type="radio" name="celebrationType" required value="Wedding" />Wedding</label>
+                    <label class="label--check"><input type="radio" name="celebrationType" required value="Corporate" />Corporate</label>
+                    <label class="label--check"><input type="radio" name="celebrationType" required value="Other" />Other</label>
+                    <input class="field field--text" type="text" name="celebrationOther" id="celebrationOther" />
                 </div>
                 <div>
-                    <label for="dreamCake">Tell us about your dream cake:</label>
-                    <textarea name="dreamCake" id="dreamCake"></textarea>
+                    <label class="label" for="dreamCake">Tell us about your dream cake:</label>
+                    <textarea class="field field--textarea" name="dreamCake" id="dreamCake"></textarea>
                 </div>
                 <div>
-                    <button type="submit">Send away</button>
-                    <button type="reset">Restart</button>
+                    <button class="btn btn--submit" type="submit">Send away</button>
+                    <button class="btn btn--reset" type="reset">Restart</button>
                 </div>
             </form>
         </main>

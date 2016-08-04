@@ -5,6 +5,10 @@ $color-text: rgba(white, 0.95);
 $color-border: rgba(white, 0.4);
 $color-field-background: rgba(white, 0.25);
 
+$gutter-small: 20px;
+$gutter-large: 32px;
+$content-width: 560px + $gutter-small * 2;
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -21,17 +25,29 @@ body {
 }
 
 .container {
-    max-width: 560px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    max-width: $content-width;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
+    padding-left: $gutter-small;
+    padding-right: $gutter-small;
+    padding-top: 30px;
+
+    @media (min-width: $content-width) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .form {
     border: 1px solid $color-border;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: $gutter-small;
+    padding-right: $gutter-small;
+
+    @media (min-width: $content-width) {
+        padding-left: $gutter-large;
+        padding-right: $gutter-large;
+    }
 }
 
 .form__title {

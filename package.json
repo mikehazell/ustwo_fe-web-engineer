@@ -1,0 +1,22 @@
+{
+  "name": "ustwo_fe-web-engineer",
+  "version": "1.0.0",
+  "description": "A short test project for Front End Web Engineer",
+  "main": "index.js",
+  "scripts": {
+    "styles": "node-sass -w src/styles.scss styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikehazell/ustwo_fe-web-engineer.git"
+  },
+  "author": "mike.hazell@gmail.com",
+  "bugs": {
+    "url": "https://github.com/mikehazell/ustwo_fe-web-engineer/issues"
+  },
+  "homepage": "https://github.com/mikehazell/ustwo_fe-web-engineer#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0"
+  }
+}

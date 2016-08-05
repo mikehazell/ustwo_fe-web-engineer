@@ -14,7 +14,7 @@
         var otherVal = document.getElementById('celebrationOther').value;
         var errorEl = document.querySelector('.error');
 
-        if (isChecked && otherVal.length === 0) {
+        if (isChecked && otherVal.trim().length === 0) {
             event.preventDefault();
             setErrorMessage(errorEl, 'Please tell us what type of celebration you are having');
         } else {

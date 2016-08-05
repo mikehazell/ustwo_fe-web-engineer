@@ -19,11 +19,8 @@
   },
   "homepage": "https://github.com/mikehazell/ustwo_fe-web-engineer#readme",
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "babel-register": "^6.11.6",
     "casperjs": "^1.1.3",
-    "chai": "^3.5.0",
-    "mocha": "^3.0.1",
+    "http-server": "^0.9.0",
     "node-sass": "^3.8.0"
   }
 }

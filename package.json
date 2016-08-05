@@ -4,7 +4,10 @@
   "description": "A short test project for Front End Web Engineer",
   "main": "index.js",
   "scripts": {
+    "dev": ".bin/dev.sh",
     "test": ".bin/test.sh",
+    "prestart": "node-sass src/styles.scss styles.css",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",

@@ -50,7 +50,7 @@ old es5.
 
 Normally I'd be linting, transpiling, concatenating (or bundling) and minifying
 my JS and doing similar mangling of the html and styles to save every bite. In
-this case, the JS file is just 20 lines, the html not much more I'm really only
+this case, the JS file is just 20 lines, the html not much more and I'm really only
 compiling the SCSS because it was a requirement. I thought I'd keep it simple.
 
 > Look ma, only three dependencies!

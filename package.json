@@ -4,9 +4,7 @@
   "description": "A short test project for Front End Web Engineer",
   "main": "index.js",
   "scripts": {
-    "styles": "node-sass src/styles.scss styles.css",
-    "scripts": "browserify src/main.js -o main.js -t [ babelify --presets [ es2015 ] ]",
-    "test": "mocha --compilers js:babel-register tests/*.js"
+    "test": ".bin/test.sh",
   },
   "repository": {
     "type": "git",

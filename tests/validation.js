@@ -1,20 +1,53 @@
-import { expect } from 'chai'
-import { isValidCelebrationType } from '../src/scripts/validations';
+var baseUrl = 'http://localhost:5000/';
+var errorMessage = 'Please tell us what type of celebration you are having';
 
-describe('Validation test', () => {
-    describe('isValidCelebrationType')
-        it('should be valid for any value which is not "Other"', () => {
-            const result = isValidCelebrationType('Birthday');
-            expect(result).to.be.true;
-        });
+casper.test.begin('Form should show error for celebrationType', 6, function(test) {
+    casper.start(baseUrl, function() {
+        test.assertEquals(this.getCurrentUrl(), baseUrl);
+        test.assertTitle('Cake Enquiry Form');
+        test.assertExists('form', "main form is found");
+        this.fill('form', {
+            name: "Test user",
+            email: "test@email.com",
+            celebrationType: 'Other',
+        }, true);
+    });
 
-        it('should be valid for "Other" if freetext is given', () => {
-            const result = isValidCelebrationType('Other', 'Something else');
-            expect(result).to.be.true;
-        });
+    casper.then(function() {
+        test.assertExists('div.error');
+        var errorText = this.fetchText('div.error');
+        casper.test.assertEquals(errorText, errorMessage, 'Has the correct error message.');
+        // Should not have navigated
+        test.assertEquals(this.getCurrentUrl(), baseUrl, 'Has not submitted.');
+    });
 
-        it('should not be valid for "Other" if no freetext is given', () => {
-            const result = isValidCelebrationType('Other', '');
-            expect(result).to.be.false;
-        });
+    casper.run(function() {
+        test.done();
+    });
+});
+
+
+casper.test.begin('From should submit', 6, function(test) {
+    casper.start(baseUrl, function() {
+        test.assertEquals(this.getCurrentUrl(), baseUrl);
+        test.assertTitle('Cake Enquiry Form');
+        test.assertExists('form', "Main form is found");
+        this.fill('form', {
+            name: "Test user",
+            email: "test@email.com",
+            celebrationType: 'Birthday',
+            dreamCake: 'The Melenium Falcon flying out of an exploding Death Star'
+        }, true);
+    });
+
+    casper.then(function() {
+        test.assertExists('div.error');
+        var errorText = this.fetchText('div.error');
+        test.assertEquals(errorText, '', 'Does not have an error message');
+        test.assert(this.getCurrentUrl() !== baseUrl, 'Form has submitted');
+    });
+
+    casper.run(function() {
+        test.done();
+    });
 });
